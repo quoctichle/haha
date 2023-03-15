@@ -15,13 +15,13 @@ namespace WebSach.Areas.WebAdmin.Controllers
     {
         private Model1 db = new Model1();
 
-        // GET: WebAdmin/Authors
+        // GET: WebAdmin/AdminAuthors
         public async Task<ActionResult> Index()
         {
             return View(await db.Authors.ToListAsync());
         }
 
-        // GET: WebAdmin/Authors/Details/5
+        // GET: WebAdmin/AdminAuthors/Details/5
         public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
@@ -36,13 +36,13 @@ namespace WebSach.Areas.WebAdmin.Controllers
             return View(authors);
         }
 
-        // GET: WebAdmin/Authors/Create
+        // GET: WebAdmin/AdminAuthors/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: WebAdmin/Authors/Create
+        // POST: WebAdmin/AdminAuthors/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -59,7 +59,7 @@ namespace WebSach.Areas.WebAdmin.Controllers
             return View(authors);
         }
 
-        // GET: WebAdmin/Authors/Edit/5
+        // GET: WebAdmin/AdminAuthors/Edit/5
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
@@ -74,7 +74,7 @@ namespace WebSach.Areas.WebAdmin.Controllers
             return View(authors);
         }
 
-        // POST: WebAdmin/Authors/Edit/5
+        // POST: WebAdmin/AdminAuthors/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -90,7 +90,7 @@ namespace WebSach.Areas.WebAdmin.Controllers
             return View(authors);
         }
 
-        // GET: WebAdmin/Authors/Delete/5
+        // GET: WebAdmin/AdminAuthors/Delete/5
         public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)
@@ -105,7 +105,7 @@ namespace WebSach.Areas.WebAdmin.Controllers
             return View(authors);
         }
 
-        // POST: WebAdmin/Authors/Delete/5
+        // POST: WebAdmin/AdminAuthors/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)

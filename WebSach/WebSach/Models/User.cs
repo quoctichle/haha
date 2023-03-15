@@ -28,5 +28,7 @@ namespace WebSach.Models
 
         [StringLength(50)]
         public string Status { get; set; }
+
+        public bool? Permission_Id { get; set; }
     }
 }

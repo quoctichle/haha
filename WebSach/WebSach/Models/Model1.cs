@@ -12,7 +12,6 @@ namespace WebSach.Models
         {
         }
 
-        public virtual DbSet<Admin> Admin { get; set; }
         public virtual DbSet<Authors> Authors { get; set; }
         public virtual DbSet<Books> Books { get; set; }
         public virtual DbSet<Categories> Categories { get; set; }
@@ -20,6 +19,7 @@ namespace WebSach.Models
         public virtual DbSet<Permission> Permission { get; set; }
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<Reaction> Reaction { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()

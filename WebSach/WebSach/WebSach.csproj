@@ -129,14 +129,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Areas\WebAdmin\Controllers\AdminAdminsController.cs" />
-    <Compile Include="Areas\WebAdmin\Controllers\AdminBooksController.cs" />
     <Compile Include="Areas\WebAdmin\Controllers\AdminAuthorsController.cs" />
+    <Compile Include="Areas\WebAdmin\Controllers\AdminBooksController.cs" />
     <Compile Include="Areas\WebAdmin\Controllers\AdminCategoriesController.cs" />
-    <Compile Include="Areas\WebAdmin\Controllers\AdminChaptersController.cs" />
     <Compile Include="Areas\WebAdmin\Controllers\AdminPermissionsController.cs" />
-    <Compile Include="Areas\WebAdmin\Controllers\AdminReactionsController.cs" />
     <Compile Include="Areas\WebAdmin\Controllers\AdminUsersController.cs" />
+    <Compile Include="Areas\WebAdmin\Controllers\ChaptersController.cs" />
     <Compile Include="Areas\WebAdmin\Controllers\HomeAdminController.cs" />
     <Compile Include="Areas\WebAdmin\WebAdminAreaRegistration.cs" />
     <Compile Include="Content\ReactionsController.cs" />
@@ -144,7 +142,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Authors.cs" />
     <Compile Include="Models\Books.cs" />
     <Compile Include="Models\Categories.cs" />
@@ -170,11 +167,6 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\WebAdmin\Views\web.config" />
     <Content Include="Areas\WebAdmin\Views\Shared\_AdminLayout.cshtml" />
-    <Content Include="Areas\WebAdmin\Views\AdminAdmins\Create.cshtml" />
-    <Content Include="Areas\WebAdmin\Views\AdminAdmins\Delete.cshtml" />
-    <Content Include="Areas\WebAdmin\Views\AdminAdmins\Details.cshtml" />
-    <Content Include="Areas\WebAdmin\Views\AdminAdmins\Edit.cshtml" />
-    <Content Include="Areas\WebAdmin\Views\AdminAdmins\Index.cshtml" />
     <Content Include="Areas\WebAdmin\Views\Shared\Error.cshtml" />
     <Content Include="Areas\WebAdmin\Views\HomeAdmin\Index.cshtml" />
     <Content Include="Areas\WebAdmin\Views\AdminAuthors\Create.cshtml" />
@@ -192,21 +184,16 @@
     <Content Include="Areas\WebAdmin\Views\AdminCategories\Details.cshtml" />
     <Content Include="Areas\WebAdmin\Views\AdminCategories\Edit.cshtml" />
     <Content Include="Areas\WebAdmin\Views\AdminCategories\Index.cshtml" />
-    <Content Include="Areas\WebAdmin\Views\AdminChapters\Create.cshtml" />
-    <Content Include="Areas\WebAdmin\Views\AdminChapters\Delete.cshtml" />
-    <Content Include="Areas\WebAdmin\Views\AdminChapters\Details.cshtml" />
-    <Content Include="Areas\WebAdmin\Views\AdminChapters\Edit.cshtml" />
-    <Content Include="Areas\WebAdmin\Views\AdminChapters\Index.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Chapters\Create.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Chapters\Delete.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Chapters\Details.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Chapters\Edit.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Chapters\Index.cshtml" />
     <Content Include="Areas\WebAdmin\Views\AdminPermissions\Create.cshtml" />
     <Content Include="Areas\WebAdmin\Views\AdminPermissions\Delete.cshtml" />
     <Content Include="Areas\WebAdmin\Views\AdminPermissions\Details.cshtml" />
     <Content Include="Areas\WebAdmin\Views\AdminPermissions\Edit.cshtml" />
     <Content Include="Areas\WebAdmin\Views\AdminPermissions\Index.cshtml" />
-    <Content Include="Areas\WebAdmin\Views\AdminReactions\Create.cshtml" />
-    <Content Include="Areas\WebAdmin\Views\AdminReactions\Delete.cshtml" />
-    <Content Include="Areas\WebAdmin\Views\AdminReactions\Details.cshtml" />
-    <Content Include="Areas\WebAdmin\Views\AdminReactions\Edit.cshtml" />
-    <Content Include="Areas\WebAdmin\Views\AdminReactions\Index.cshtml" />
     <Content Include="Areas\WebAdmin\Views\AdminUsers\Create.cshtml" />
     <Content Include="Areas\WebAdmin\Views\AdminUsers\Delete.cshtml" />
     <Content Include="Areas\WebAdmin\Views\AdminUsers\Details.cshtml" />
