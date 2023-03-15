@@ -20,7 +20,6 @@ namespace WebSach.Models
         public virtual DbSet<Permission> Permission { get; set; }
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<Reaction> Reaction { get; set; }
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
