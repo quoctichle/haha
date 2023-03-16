@@ -4,10 +4,10 @@
     Layout = "~/Areas/WebAdmin/Views/Shared/_AdminLayout.cshtml";
 }
 <script src="https://d3js.org/d3.v5.min.js"></script>
-
+<div class="col-md-6">
     <h1>Biểu Đồ So Sánh Lượt View Hàng Tháng</h1>
-    <div id="chart" style="display: inline-block" ></div>
-
+    <div id="chart" style="display: inline-block"></div>
+</div>
     <script>
         var data = [
             { month: "Jan", income: 100 },
@@ -35,6 +35,8 @@
 
         // Thêm đối tượng mới vào mảng data
         data.push(newData);
+
+
 
 
 

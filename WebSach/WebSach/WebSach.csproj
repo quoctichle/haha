@@ -134,7 +134,7 @@
     <Compile Include="Areas\WebAdmin\Controllers\AdminCategoriesController.cs" />
     <Compile Include="Areas\WebAdmin\Controllers\AdminPermissionsController.cs" />
     <Compile Include="Areas\WebAdmin\Controllers\AdminUsersController.cs" />
-    <Compile Include="Areas\WebAdmin\Controllers\ChaptersController.cs" />
+    <Compile Include="Areas\WebAdmin\Controllers\AdminChaptersController.cs" />
     <Compile Include="Areas\WebAdmin\Controllers\HomeAdminController.cs" />
     <Compile Include="Areas\WebAdmin\WebAdminAreaRegistration.cs" />
     <Compile Include="Content\ReactionsController.cs" />
@@ -184,11 +184,11 @@
     <Content Include="Areas\WebAdmin\Views\AdminCategories\Details.cshtml" />
     <Content Include="Areas\WebAdmin\Views\AdminCategories\Edit.cshtml" />
     <Content Include="Areas\WebAdmin\Views\AdminCategories\Index.cshtml" />
-    <Content Include="Areas\WebAdmin\Views\Chapters\Create.cshtml" />
-    <Content Include="Areas\WebAdmin\Views\Chapters\Delete.cshtml" />
-    <Content Include="Areas\WebAdmin\Views\Chapters\Details.cshtml" />
-    <Content Include="Areas\WebAdmin\Views\Chapters\Edit.cshtml" />
-    <Content Include="Areas\WebAdmin\Views\Chapters\Index.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\AdminChapters\Create.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\AdminChapters\Delete.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\AdminChapters\Details.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\AdminChapters\Edit.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\AdminChapters\Index.cshtml" />
     <Content Include="Areas\WebAdmin\Views\AdminPermissions\Create.cshtml" />
     <Content Include="Areas\WebAdmin\Views\AdminPermissions\Delete.cshtml" />
     <Content Include="Areas\WebAdmin\Views\AdminPermissions\Details.cshtml" />
@@ -199,6 +199,7 @@
     <Content Include="Areas\WebAdmin\Views\AdminUsers\Details.cshtml" />
     <Content Include="Areas\WebAdmin\Views\AdminUsers\Edit.cshtml" />
     <Content Include="Areas\WebAdmin\Views\AdminUsers\Index.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\_ViewStart.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\demo.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
