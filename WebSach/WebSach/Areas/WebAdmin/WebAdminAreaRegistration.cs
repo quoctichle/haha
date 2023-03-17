@@ -17,8 +17,12 @@ namespace WebSach.Areas.WebAdmin
             context.MapRoute(
                 "WebAdmin_default",
                 "WebAdmin/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                 defaults: new { area = "WebAdmin", controller = "HomeAdmin", action = "Index", id = UrlParameter.Optional }
+
             );
+
+            
+
         }
     }
 }

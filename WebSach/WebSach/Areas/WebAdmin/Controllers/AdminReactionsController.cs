@@ -11,107 +11,107 @@ using WebSach.Models;
 
 namespace WebSach.Areas.WebAdmin.Controllers
 {
-    public class AdminAuthorsController : Controller
+    public class AdminReactionsController : Controller
     {
         private Model1 db = new Model1();
 
-        // GET: WebAdmin/AdminAuthors
+        // GET: WebAdmin/AdminReactions
         public async Task<ActionResult> Index()
         {
-            return View(await db.Authors.ToListAsync());
+            return View(await db.Reaction.ToListAsync());
         }
 
-        // GET: WebAdmin/AdminAuthors/Details/5
-        public async Task<ActionResult> Details(int? id)
+        // GET: WebAdmin/AdminReactions/Details/5
+        public async Task<ActionResult> Details(DateTime id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Authors authors = await db.Authors.FindAsync(id);
-            if (authors == null)
+            Reaction reaction = await db.Reaction.FindAsync(id);
+            if (reaction == null)
             {
                 return HttpNotFound();
             }
-            return View(authors);
+            return View(reaction);
         }
 
-        // GET: WebAdmin/AdminAuthors/Create
+        // GET: WebAdmin/AdminReactions/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: WebAdmin/AdminAuthors/Create
+        // POST: WebAdmin/AdminReactions/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Author_Id,Author_Name,Description")] Authors authors)
+        public async Task<ActionResult> Create([Bind(Include = "Update_at,Comment_content")] Reaction reaction)
         {
             if (ModelState.IsValid)
             {
-                db.Authors.Add(authors);
+                db.Reaction.Add(reaction);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
-            return View(authors);
+            return View(reaction);
         }
 
-        // GET: WebAdmin/AdminAuthors/Edit/5
-        public async Task<ActionResult> Edit(int? id)
+        // GET: WebAdmin/AdminReactions/Edit/5
+        public async Task<ActionResult> Edit(DateTime id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Authors authors = await db.Authors.FindAsync(id);
-            if (authors == null)
+            Reaction reaction = await db.Reaction.FindAsync(id);
+            if (reaction == null)
             {
                 return HttpNotFound();
             }
-            return View(authors);
+            return View(reaction);
         }
 
-        // POST: WebAdmin/AdminAuthors/Edit/5
+        // POST: WebAdmin/AdminReactions/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Author_Id,Author_Name,Description")] Authors authors)
+        public async Task<ActionResult> Edit([Bind(Include = "Update_at,Comment_content")] Reaction reaction)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(authors).State = EntityState.Modified;
+                db.Entry(reaction).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            return View(authors);
+            return View(reaction);
         }
 
-        // GET: WebAdmin/AdminAuthors/Delete/5
-        public async Task<ActionResult> Delete(int? id)
+        // GET: WebAdmin/AdminReactions/Delete/5
+        public async Task<ActionResult> Delete(DateTime id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Authors authors = await db.Authors.FindAsync(id);
-            if (authors == null)
+            Reaction reaction = await db.Reaction.FindAsync(id);
+            if (reaction == null)
             {
                 return HttpNotFound();
             }
-            return View(authors);
+            return View(reaction);
         }
 
-        // POST: WebAdmin/AdminAuthors/Delete/5
+        // POST: WebAdmin/AdminReactions/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> DeleteConfirmed(int id)
+        public async Task<ActionResult> DeleteConfirmed(DateTime id)
         {
-            Authors authors = await db.Authors.FindAsync(id);
-            db.Authors.Remove(authors);
+            Reaction reaction = await db.Reaction.FindAsync(id);
+            db.Reaction.Remove(reaction);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }

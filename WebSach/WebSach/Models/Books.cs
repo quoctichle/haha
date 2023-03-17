@@ -15,7 +15,6 @@ namespace WebSach.Models
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Book_Id { get; set; }
 
         [StringLength(250)]
@@ -28,8 +27,6 @@ namespace WebSach.Models
         [StringLength(50)]
         public string Author { get; set; }
 
-        public string Description { get; set; }
-
         public DateTime? Create_at { get; set; }
 
         public DateTime? Update_at { get; set; }
@@ -38,6 +35,8 @@ namespace WebSach.Models
         public string Avatar { get; set; }
 
         public int? View { get; set; }
+
+        public int? User_Id { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Chapter> Chapter { get; set; }
